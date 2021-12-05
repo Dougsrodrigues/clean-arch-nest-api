@@ -3,14 +3,14 @@ version: "3.7"
 services: 
   gizh_postgres_database:
     image: postgres
-    container_name: gizh_postgres_database
+    container_name: postgres_database
     restart: always
     ports:
       - 5432:5432
     environment:
       - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=gizh123
-      - POSTGRES_DB=gizh
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=postgresDB
     volumes:
       - pgdata:/data/postgres    
   app:
