@@ -1,0 +1,39 @@
+*************************************************************
+*                                                           *
+*               RODANDO APLICAÇÃO COM DOCKER                *
+*                                                           *
+*************************************************************
+
+
+*************************************************************
+* AVISO : É IMPORTANTE TER O DOCKER INSTALADO E CONFIGURADO *
+*************************************************************
+
+
+* Caso queira rodar so a imagem da API *
+* Caso for a primeira vez, rode o comando abaixo para criar uma
+  imagem da api e espere todo o processo:
+
+ => docker build -t gizh-api .
+
+* Para rodar a aplicação, rode o comando abaixo
+
+ => docker run -p 3333:3333 gizh-api
+
+
+*************************************************************
+*                                                           *
+*               USANDO DOCKER COMPONSE                      *
+*                                                           *
+*************************************************************
+
+* Para rodar a aplicação e inicializar todos os serviços
+  (Banco de dados e etc..), rode o comando:
+
+ => docker-compose up
+
+* Rodando em background e visualizando logs
+
+   => docker-compose up -d
+   => docker logs gizh-api -f
+
