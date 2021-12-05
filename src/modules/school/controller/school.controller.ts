@@ -11,7 +11,7 @@ export class SchoolController {
   ) {}
 
   @Post()
-  public createLivro(@Body() school: School) {
+  public createSchool(@Body() school: School) {
     console.log('Controller');
     console.log({ school });
     return this.createSchoolService.create(school);
