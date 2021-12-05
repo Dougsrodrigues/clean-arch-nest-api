@@ -1,6 +1,6 @@
 version: "3.7"
 
-services: 
+services:
   gizh_postgres_database:
     image: postgres
     container_name: postgres_database
@@ -12,7 +12,7 @@ services:
       - POSTGRES_PASSWORD=12345
       - POSTGRES_DB=postgresDB
     volumes:
-      - pgdata:/data/postgres    
+      - pgdata:/data/postgres
   app:
     build: .
     container_name: gizh
