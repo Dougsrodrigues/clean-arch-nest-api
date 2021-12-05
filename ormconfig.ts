@@ -12,8 +12,8 @@ export const configORM: TypeOrmModuleOptions = {
   synchronize: true,
   autoLoadEntities: true,
   entities: [SchoolEntity],
-  migrations: ['src/migration/*{.ts}'],
+  migrations: ['src/infra/typeorm/migrations/*{.ts}'],
   cli: {
-    migrationsDir: 'src/migration',
+    migrationsDir: 'src/infra/typeorm/migrations',
   },
 };
